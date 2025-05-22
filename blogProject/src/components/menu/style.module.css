@@ -1,0 +1,42 @@
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.navbar li {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.navbar li:hover {
+    color: #c96b5f;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        list-style: none;
+        display: contents;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar li {
+        font-weight: 600;
+        cursor: pointer;
+        color: black;
+        transition: color 0.3s;
+        font-size: 20px;
+    }
+}
