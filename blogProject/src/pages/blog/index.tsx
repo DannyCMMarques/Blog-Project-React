@@ -2,6 +2,7 @@ import type { JSX } from "react";
 import BlogList from "../../components/blogList";
 import { postsMock } from "../../utils/mock/PostMock";
 import style from "./style.module.css";
+import type { Post } from "../../utils/mock/post";
 const Blog = (): JSX.Element => {
   return (
 
@@ -10,7 +11,7 @@ const Blog = (): JSX.Element => {
 
 
       <div className={style.listaPosts}>
-        {postsMock.map((post) => (
+        {postsMock.map((post:Post) => (
           <BlogList
             key={post.id}
             date={post.date}

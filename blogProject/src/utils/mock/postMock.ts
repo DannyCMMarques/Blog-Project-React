@@ -1,11 +1,4 @@
-export interface Post {
-    id: number;
-    date: string;
-    title: string;
-    author: string;
-    content: string;
-    imageUrl: string;
-}
+import type { Post } from "./post";
 
 export const postsMock: Post[] = [
     {
