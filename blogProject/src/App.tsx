@@ -1,18 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/navbar'
-import Home from './pages/home'
-import Blog from './pages/blog'
-import Post from './pages/post'
 import About from './pages/about'
+import Blog from './pages/blog'
 import BlogPost from './pages/blogPost'
+import Home from './pages/home'
+import Post from './pages/post'
 
 function App() {
 
   return (
     <>
-      <Navbar />
       <BrowserRouter>
+            <Navbar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
