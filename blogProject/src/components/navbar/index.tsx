@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type JSX } from "react";
 import { MdClose } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import logo from "./../../assets/logo.png";
 import style from "./style.module.css";
 import Menu from "../menu";
-const Navbar = () => {
-    const [activePath] = useState(window.location.pathname);
+import { useLocation } from 'react-router-dom';
+import type { WindowSizeProps } from "../typesComponent";
+const Navbar = (): JSX.Element => {
+
+    const location = useLocation();
+    const activePath = location.pathname;
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const [windowSize, setWindowSize] = useState({
+    const [windowSize, setWindowSize] = useState<WindowSizeProps>({
         width: window.innerWidth,
         height: window.innerHeight,
     });
@@ -27,7 +31,7 @@ const Navbar = () => {
         };
     }, []);
 
-    const getNavLinkStyle = (path: string) => {
+    const getNavLinkStyle = (path: string): React.CSSProperties => {
         return activePath === path ? { fontWeight: 800, color: "#c96b5f" } : {};
     };
     const toggleMenu = () => {
