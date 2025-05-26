@@ -52,7 +52,7 @@ const Navbar = (): JSX.Element => {
                     <Menu getNavLinkStyle={getNavLinkStyle} />
                 ) : (
                     <div>
-                        <div onClick={toggleMenu}>
+                        <div onClick={toggleMenu}  data-testid="menu-toggle">
                             {menuOpen ? (
                                 <MdClose style={{ marginTop: "100px" }} size={35} />
                             ) : (
