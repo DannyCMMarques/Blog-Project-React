@@ -1,31 +1,29 @@
 import type { JSX } from "react";
 import BlogList from "../../components/blogList";
-import { postsMock } from "../../utils/mock/PostMock";
 import style from "./style.module.css";
-import type { Post } from "../../utils/mock/post";
+import type { Post } from "../../utils/mock/postInterface";
+import { postsMock } from "../../utils/mock/postMock";
+
+
+
 const Blog = (): JSX.Element => {
   return (
-
     <div className="container">
       <h1 className={style.titulo}>Blog</h1>
-
-
       <div className={style.listaPosts}>
-        {postsMock.map((post:Post) => (
+        {postsMock.map((post: Post) => (
           <BlogList
             key={post.id}
+            id={post.id}
             date={post.date}
             title={post.title}
             author={post.author}
-            excerpt={post.content}
+            content={post.content}
             imageUrl={post.imageUrl}
-            onReadMore={() => console.log(`Read more ${post.id}`)}
           />
         ))}
       </div>
     </div>
-
   );
 }
-
 export default Blog;
