@@ -1,14 +1,15 @@
 import type { JSX } from "react";
 import BlogList from "../../components/blogList";
-import style from "./style.module.css";
+import ContainerComponent from "../../components/container";
 import type { Post } from "../../utils/mock/postInterface";
 import { postsMock } from "../../utils/mock/postMock";
+import style from "./style.module.css";
 
 
 
 const Blog = (): JSX.Element => {
   return (
-    <div className="container">
+    <ContainerComponent>
       <h1 className={style.titulo}>Blog</h1>
       <div className={style.listaPosts}>
         {postsMock.map((post: Post) => (
@@ -23,7 +24,7 @@ const Blog = (): JSX.Element => {
           />
         ))}
       </div>
-    </div>
+    </ContainerComponent>
   );
 }
 export default Blog;

@@ -1,20 +1,25 @@
-.titulo {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-left:180px ;
-  color: #111827;
-  text-align: start;
-}
+
 .listaPosts {
-  display: grid;
-  grid-template-columns: 1fr;   
- row-gap: 5rem; 
- justify-items: center;  
-  margin-top: 80px;      
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 80px;
+  align-items: start;
+}
+
+.listaPosts > * {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .listaPosts {
-    grid-template-columns: repeat(2, 1fr);  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .listaPosts > * {
+    flex: 1 1 calc(50% - 2.5rem);
+    max-width: calc(50% - 2.5rem);
   }
 }
