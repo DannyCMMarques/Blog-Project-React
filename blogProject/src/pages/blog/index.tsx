@@ -15,10 +15,10 @@ const Blog = (): JSX.Element => {
           <BlogList
             key={post.id}
             id={post.id}
-            date={post.date}
-            title={post.title}
-            author={post.author}
-            content={post.content}
+            data={post.data}
+            titulo={post.titulo}
+            autor={post.autor}
+            conteudo={post.conteudo}
             imageUrl={post.imageUrl}
           />
         ))}

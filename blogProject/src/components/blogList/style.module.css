@@ -1,5 +1,5 @@
 
-.blogCard {
+.card {
     display: flex;
     flex-direction: row;
     background: #fff;
@@ -9,56 +9,39 @@
     width:65%
 }
 
-.blogContent {
+.container {
     flex: 1;
     padding: 24px;
 }
 
-.blogDate {
+.data {
     margin: 0 0 8px;
     font-size: 0.875rem;
     color: #6b7280;
 }
 
-.blogTitle {
+.titulo {
     margin: 0 0 4px;
     font-size: 1.5rem;
     font-weight: 600;
     color: #111827;
 }
 
-.blogAuthor {
+.autor {
     margin: 0 0 16px;
     font-size: 0.875rem;
     color: #9ca3af;
 }
 
-.blogExcerpt {
+.conteudo {
     margin: 0;
     font-size: 1rem;
     line-height: 1.6;
     color: #4b5563;
 }
 
-.readButton {
-    display: inline-block;
-    margin-top: 24px;
-    padding: 8px 16px;
-    background-color: var(--pink);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-}
 
-.readButton:hover {
-    opacity: 0.9;
-}
-
-.imageContainer {
+.imagemContainer {
     width: 50%;
     height: 400px;
     overflow: hidden;
@@ -68,12 +51,11 @@
 
 
 @media (max-width: 768px) {
-    .imageContainer {
+    .imagemContainer {
         max-height: 400px
     }
 
-    .blogCard {
+    .card {
         width: 100%;
-        /* max-height: 400px; */
     }
 }

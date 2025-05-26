@@ -4,19 +4,19 @@ import ButtonComponent from "../buttons";
 import { useNavigate } from "react-router-dom";
 
 type BlogCardProps = {
-    date: string;
-    title: string;
-    author: string;
-    content: string;
+    data: string;
+    titulo: string;
+    autor: string;
+    conteudo: string;
     imageUrl: string;
     id: number;
 };
 
 const BlogList = ({
-    date,
-    title,
-    author,
-    content,
+    data,
+    titulo,
+    autor,
+    conteudo,
     imageUrl,
     id,
 }: BlogCardProps): JSX.Element => {
@@ -29,12 +29,12 @@ const BlogList = ({
         navigate(`/blog/${id}`);
     };
     return (
-        <div className={style.blogCard}>
-            <div className={style.blogContent}>
-                <p className={style.blogDate}>{date}</p>
-                <h2 className={style.blogTitle}>{title}</h2>
-                <p className={style.blogAuthor}>Por {author}</p>
-                <p className={style.blogExcerpt}>{formatarResumo(content)}</p>
+        <div className={style.card}>
+            <div className={style.container}>
+                <p className={style.data}>{data}</p>
+                <h2 className={style.titulo}>{titulo}</h2>
+                <p className={style.autor}>Por {autor}</p>
+                <p className={style.conteudo}>{formatarResumo(conteudo)}</p>
                 <ButtonComponent
                     handleOnClick={() => handleOnClick(id)}
                     backgroundColor="var(--pink)"
@@ -43,7 +43,7 @@ const BlogList = ({
                 />
             </div>
             <div
-                className={style.imageContainer}
+                className={style.imagemContainer}
                 style={{ backgroundImage: `url(${imageUrl})` }}
             ></div>
         </div>
