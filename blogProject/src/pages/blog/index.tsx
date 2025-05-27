@@ -10,7 +10,9 @@ import style from "./style.module.css";
 const Blog = (): JSX.Element => {
   return (
     <ContainerComponent>
-      <h1 className={style.titulo}>Blog</h1>
+      <div className="cabecalho">
+        <p className="titulo">Blog</p>
+      </div>
       <div className={style.listaPosts}>
         {postsMock.map((post: Post) => (
           <BlogList

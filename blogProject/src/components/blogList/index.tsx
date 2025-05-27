@@ -2,15 +2,7 @@ import { type JSX } from "react";
 import style from "./style.module.css";
 import ButtonComponent from "../buttons";
 import { useNavigate } from "react-router-dom";
-
-type BlogCardProps = {
-    data: string;
-    titulo: string;
-    autor: string;
-    conteudo: string;
-    imageUrl: string;
-    id: number;
-};
+import type { Post } from "../../utils/mock/postInterface";
 
 const BlogList = ({
     data,
@@ -19,7 +11,7 @@ const BlogList = ({
     conteudo,
     imageUrl,
     id,
-}: BlogCardProps): JSX.Element => {
+}: Post): JSX.Element => {
     const navigate = useNavigate();
     const formatarResumo = (texto: string): string => {
         const limite = 180;
@@ -36,10 +28,12 @@ const BlogList = ({
                 <p className={style.autor}>Por {autor}</p>
                 <p className={style.conteudo}>{formatarResumo(conteudo)}</p>
                 <ButtonComponent
-                    handleOnClick={() => handleOnClick(id)}
+                    onClick={() => handleOnClick(id)}
                     backgroundColor="var(--pink)"
                     colorText="#fff"
                     text="Leia Mais →"
+                    extraStyle={{ marginTop: "24px" }}
+                    tipo = "pequeno"
                 />
             </div>
             <div
