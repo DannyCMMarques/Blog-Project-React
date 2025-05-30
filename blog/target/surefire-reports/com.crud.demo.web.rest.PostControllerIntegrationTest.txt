@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.crud.demo.web.rest.PostControllerIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.674 s -- in com.crud.demo.web.rest.PostControllerIntegrationTest
