@@ -110,8 +110,6 @@ O layout é **100% responsivo** para desktop e mobile.
   ```
 ![image](https://github.com/user-attachments/assets/a1873fe5-98da-4060-a5e3-d1b1d364f50c)
 
----
 
-## 📄 Licença
 
-Este projeto está licenciado sob a [MIT License](./LICENSE).
+
