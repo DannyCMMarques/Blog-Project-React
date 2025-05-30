@@ -3,12 +3,6 @@ export type WindowSizeProps ={
     height:number;
 }
 
-export interface InputsFormulario {
-    titulo: string;
-    autor: string;
-    linkImagem: string;
-    conteudo: string;
-}
 
 
 

@@ -2,16 +2,16 @@ import { type JSX } from "react";
 import style from "./style.module.css";
 import ButtonComponent from "../buttons";
 import { useNavigate } from "react-router-dom";
-import type { Post } from "../../utils/mock/postInterface";
+import type { PostResponseDTO } from "../../service/interfaces/interface";
 
 const BlogList = ({
-    data,
+    horarioFormatado: data,
     titulo,
     autor,
     conteudo,
-    imageUrl,
+    linkImagem,
     id,
-}: Post): JSX.Element => {
+}: PostResponseDTO): JSX.Element => {
     const navigate = useNavigate();
     const formatarResumo = (texto: string): string => {
         const limite = 180;
@@ -38,7 +38,7 @@ const BlogList = ({
             </div>
             <div
                 className={style.imagemContainer}
-                style={{ backgroundImage: `url(${imageUrl})` }}
+                style={{ backgroundImage: `url(${linkImagem})` }}
             ></div>
         </div>
     );
