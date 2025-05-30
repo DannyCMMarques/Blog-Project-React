@@ -24,9 +24,9 @@ function usePostsService() {
 
     async function listarPosts(
         page: number = 1,
-        size: number = 10,
-        sortBy: string = "titulo",
-        direction: "asc" | "desc" = "asc"
+        size: number = 5,
+        sortBy: string = "",
+        direction: "asc" | "desc" = "desc"
     ): Promise<PostPage> {
         const response = await api.get<PostPage>(url, {
             params: { page, size, sortBy, direction },

@@ -37,6 +37,13 @@
   font-size: 19px;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
 @media screen and (max-width: 768px) {
   .conteudo {
     margin: 0;
@@ -49,3 +56,5 @@
     margin: 0;
   }
 }
+
+
