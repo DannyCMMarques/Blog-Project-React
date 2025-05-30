@@ -4,6 +4,7 @@ import ContainerComponent from "../../components/container";
 import type { PostResponseDTO } from "../../service/interfaces/interface";
 import usePostsService from "../../service/usePostsService";
 import style from "./style.module.css";
+import { BeatLoader } from "react-spinners";
 
 const BlogPost: React.FC = (): JSX.Element => {
   const postsService = usePostsService();
@@ -13,7 +14,6 @@ const BlogPost: React.FC = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
   const idNumber = Number(id);
 
-  console.log(isLoading);
   const exibirPost = useCallback(
     async (id: number) => {
       setIsLoading(true);
@@ -37,7 +37,11 @@ const BlogPost: React.FC = (): JSX.Element => {
       <div className="cabecalho">
         <h1 className="titulo">{post?.titulo}</h1>
       </div>
-
+  {isLoading && (
+      <div className={style.loading}>
+      <BeatLoader color="#621a1a" />
+    </div>
+    )}
       <div className={style.containerAutorData}>
         <span className={style.autor}>Por {post?.autor}</span>
         <span className={style.data}>{post?.horarioFormatado}</span>

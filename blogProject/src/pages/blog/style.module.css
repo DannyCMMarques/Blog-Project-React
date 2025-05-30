@@ -10,7 +10,12 @@
 .listaPosts > * {
   width: 100%;
 }
-
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
 @media (min-width: 768px) {
   .listaPosts {
     flex-direction: row;

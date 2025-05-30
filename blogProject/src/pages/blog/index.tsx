@@ -8,14 +8,16 @@ import type {
 } from "../../service/interfaces/interface";
 import usePostsService from "../../service/usePostsService";
 import style from "./style.module.css";
+import { BeatLoader } from "react-spinners";
 
 const Blog = (): JSX.Element => {
   const postsService = usePostsService();
   const [posts, setPosts] = useState<PostResponseDTO[]>([]);
   const [pagina, setPagina] = useState<number>(1);
-  const size=10;
+  const size=5;
   const [isLoading, setIsLoading] = useState(false);
   const [totalPages, setTotalPages] = useState<number>(0);
+
   const exibirPosts = useCallback(
     async (page = 1) => {
       setIsLoading(true);
@@ -31,7 +33,6 @@ const Blog = (): JSX.Element => {
     },
     [postsService]
   );
-  console.log(isLoading);
   useEffect(() => {
     exibirPosts(pagina);
   }, [pagina, size]);
@@ -41,6 +42,11 @@ const Blog = (): JSX.Element => {
       <div className="cabecalho">
         <p className="titulo">Blog</p>
       </div>
+    {isLoading && (
+      <div className={style.loading}>
+      <BeatLoader color="#621a1a" />
+    </div>
+    )}
       <div className={style.listaPosts}>
         {posts.map((post: PostResponseDTO) => (
           <BlogList

@@ -12,7 +12,6 @@ import style from "./style.module.css";
 
 const Post = () => {
   const [isSalvo, setIsSalvo] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [idPostSalvo, setIdPostSalvo] = useState<number>();
   const [resetar, setResatar] = useState(false);
   const postsService = usePostsService();
@@ -20,31 +19,24 @@ const Post = () => {
 
   const editarPost = useCallback(
     async (id: number, data: PostRequestDTO) => {
-      setIsLoading(true);
       try {
         await postsService.atualizarPosts(id, data);
         toast.success("Post Editado Com Sucesso");
       } catch (err) {
         console.error("Erro ao buscar itens:", err);
-      } finally {
-        setIsLoading(false);
-      }
+      } 
     },
     [postsService]
   );
-  console.log(isLoading);
 
   const excluirPost = useCallback(
     async (id: number) => {
-      setIsLoading(true);
       try {
         await postsService.deletarPost(id);
         toast.success("Post deletado com Sucesso");
         setResatar(true);
       } catch (err) {
         console.error("Erro ao buscar itens:", err);
-      } finally {
-        setIsLoading(false);
       }
     },
     [postsService]
@@ -52,7 +44,6 @@ const Post = () => {
 
   const cadastrarPost = useCallback(
     async (data: PostRequestDTO) => {
-      setIsLoading(true);
       try {
         const postsData: PostResponseDTO = await postsService.cadastrarPosts(
           data
@@ -63,9 +54,7 @@ const Post = () => {
         setIsSalvo(true);
       } catch (err) {
         console.error("Erro ao buscar itens:", err);
-      } finally {
-        setIsLoading(false);
-      }
+      } 
     },
     [postsService]
   );

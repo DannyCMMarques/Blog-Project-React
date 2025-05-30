@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/menu/index.tsx</title>
+    <title>Code coverage report for src/utils/mock/postRequestMock.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/menu</a> index.tsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/utils/mock</a> postRequestMock.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/19</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/19</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -81,15 +81,10 @@
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -98,49 +93,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { type JSX } from "react";
-import menuContentItens from "./../../utils/content/menuContentItens";
-import style from './style.module.css'
-import { Link } from "react-router-dom";
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { PostRequestDTO } from "../../service/interfaces/interface";
 &nbsp;
-type MenuProps = {
-    getNavLinkStyle: (path: string) =&gt; React.CSSProperties;
-};
+export const postsRequestMock: PostRequestDTO = 
+    {
+        titulo: "Classic New York-Style Cheesecake Recipe",
+        autor: "Jane Doe",
+        conteudo: "Nos últimos anos, a tecnologia tem avançado em um ritmo acelerado, trazendo inovações que impactam desde a forma como nos comunicamos até o modo como trabalhamos e aprendemos.\n" +
+            "No campo da saúde, vimos o surgimento de dispositivos vestíveis que monitoram sinais vitais em tempo real, permitindo intervenções rápidas e personalizadas para cada paciente.\n" +
+            "A sustentabilidade também ganhou destaque: cidades inteligentes estão adotando sistemas de energia renovável e redes de transporte mais eficientes para reduzir emissões de carbono.\n" +
+            "Em paralelo, o setor educacional explora o ensino híbrido e plataformas de aprendizado adaptativo, que usam inteligência artificial para ajustar conteúdos ao ritmo de cada estudante.\n" +
+            "No universo cultural, observamos um renascimento do interesse por artesanato e produtos locais, como resposta à produção em massa e à busca por conexões mais autênticas.\n" +
+            "O turismo pós-pandemia vem se reinventando, com roteiros focados em ecoturismo e experiências imersivas que valorizam a natureza e as tradições regionais.\n" +
+            "Na esfera financeira, as criptomoedas e as fintechs desafiam modelos tradicionais de bancos, oferecendo serviços mais rápidos, transparentes e acessíveis.\n" +
+            "Por fim, as redes sociais continuam evoluindo, com comunidades cada vez mais segmentadas e novas formas de criar e compartilhar conteúdo, moldando comportamentos e tendências globais.",
+        linkImagem:
+            "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&amp;w=2080&amp;auto=format&amp;fit=crop",
+    }
 &nbsp;
-const Menu = ({getNavLinkStyle}: MenuProps):JSX.Element =&gt; {
-    return (
-        &lt;nav className={style.nav}&gt;
-            &lt;ul className={style.navbar}&gt;
-                {menuContentItens.map((content) =&gt; (
-                    &lt;li key={content.id}&gt;
-                        &lt;Link style={getNavLinkStyle(content.href)} to={content.href}&gt;
-                            {content.title}
-                        &lt;/Link&gt;
-                    &lt;/li&gt;
-                ))}
-            &lt;/ul&gt;
-        &lt;/nav&gt;
-    );
-};
-&nbsp;
-export default Menu;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
