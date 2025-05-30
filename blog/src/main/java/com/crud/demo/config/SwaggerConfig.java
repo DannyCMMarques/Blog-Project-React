@@ -13,8 +13,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
             .info(new Info()
-                .title("API de Votação")
+                .title("API de Post")
                 .version("v1")
-                .description("Documentação da API de Votação - CRUD de Pautas, Associados, Votos"));
+                .description("Documentação da API de Post - CRUD de Posts"));
     }
 }

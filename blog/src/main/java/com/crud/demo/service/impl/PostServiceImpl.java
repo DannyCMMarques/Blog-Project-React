@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class PostServiceImpl implements PostService{
+public class PostServiceImpl implements PostService {
 
     private final PostRepository postRepository;
     private final PostMapper postMapper;
@@ -37,9 +37,14 @@ public class PostServiceImpl implements PostService{
                 .orElseThrow(() -> new PostNaoEncontradoException());
         return postMapper.toDTO(Post);
     }
+
     @Override
     public Page<PostResponseDTO> listarTodosPosts(int page, int size, String sortBy, String direction) {
-        Sort sort = direction.equalsIgnoreCase("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
+        String sortProperty = (sortBy == null || sortBy.isBlank())
+                ? "createAt"
+                : sortBy;
+        Sort sort = direction.equalsIgnoreCase("desc") ? Sort.by(sortProperty).descending()
+                : Sort.by(sortProperty).ascending();
         int pageIndex = page < 1 ? 0 : page - 1;
         Pageable pageable = PageRequest.of(pageIndex, size, sort);
         Page<Post> postsEncontrados = postRepository.findAll(pageable);

@@ -3,6 +3,7 @@ package com.crud.demo.domain;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -38,7 +39,6 @@ public class Post {
     @NotBlank(message = "O conteúdo é obrigatório")
     private String conteudo;
 
-    private LocalDateTime create_at = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
-
-
+@Column(name = "create_at")
+    private LocalDateTime createAt = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
 }

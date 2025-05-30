@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-05-30T09:00:58-0300",
+    date = "2025-05-30T14:16:28-0300",
     comments = "version: 1.6.3, compiler: Eclipse JDT (IDE) 3.42.0.v20250514-1000, environment: Java 21.0.7 (Eclipse Adoptium)"
 )
 @Component
@@ -44,7 +44,7 @@ public class PostMapperImpl implements PostMapper {
         postResponseDTO.linkImagem( post.getLinkImagem() );
         postResponseDTO.titulo( post.getTitulo() );
 
-        postResponseDTO.horarioFormatado( formatarHorario(post.getCreate_at()) );
+        postResponseDTO.horarioFormatado( formatarHorario(post.getCreateAt()) );
 
         return postResponseDTO.build();
     }

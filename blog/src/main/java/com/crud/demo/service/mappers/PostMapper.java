@@ -16,7 +16,7 @@ public interface PostMapper {
 
     Post toEntity(PostRequestDTO postRequestDTO);
 
-    @Mapping(target = "horarioFormatado", expression = "java(formatarHorario(post.getCreate_at()))")
+    @Mapping(target = "horarioFormatado", expression = "java(formatarHorario(post.getCreateAt()))")
     PostResponseDTO toDTO(Post post);
 
     // Post toEntity(PostResponseDTO postResponseDTO);

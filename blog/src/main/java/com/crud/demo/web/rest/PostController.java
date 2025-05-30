@@ -61,9 +61,9 @@ public class PostController {
     @GetSwaggerAnnotation
     public ResponseEntity<Page<PostResponseDTO>> listar(
             @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "10") int size,
-            @RequestParam(defaultValue = "titulo") String sortBy,
-            @RequestParam(defaultValue = "asc") String direction) {
+            @RequestParam(defaultValue = "5") int size,
+            @RequestParam(defaultValue = "") String sortBy,
+            @RequestParam(defaultValue = "desc") String direction) {
 
         Page<PostResponseDTO> pagina = postService.listarTodosPosts(page, size, sortBy, direction);
         return ResponseEntity.ok(pagina);
