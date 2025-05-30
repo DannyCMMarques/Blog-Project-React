@@ -60,9 +60,6 @@ O layout é **100% responsivo** para desktop e mobile.
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/351984a7-3470-47a0-9a15-fefcaf5ecf7d" alt="Home do PerfectRecipe" width="600" />
-</p>
-<p align="center">
   <img src="https://github.com/user-attachments/assets/b32872cf-5f79-4c58-a49a-4534f894da30" width="600" />
 </p>
 <p align="center">
