@@ -69,6 +69,10 @@ O layout é **100% responsivo** para desktop e mobile.
   <img src="https://github.com/user-attachments/assets/7188d74f-0132-4eaf-8b3f-51ab205a6faa" width="600" />
 </p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5ac61b14-9f10-4382-a6c0-004cef791157" width="600" />
+</p>
+
 
 ---
 
