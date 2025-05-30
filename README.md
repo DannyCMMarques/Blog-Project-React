@@ -16,7 +16,7 @@ Este é um **MVP de um Blog** chamado **PerfectRecipe**, desenvolvido com **Reac
 - **Página de visualização** de um post individual (ao clicar em “Leia mais”)  
 
 O layout é **100% responsivo** para desktop e mobile.
-
+- Acesse o back por meio desse link: https://github.com/DannyCMMarques/Blog-Back-Spring-Java
 ---
 
 ## 🛠 Tecnologias
