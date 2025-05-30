@@ -1,0 +1,61 @@
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width:65%
+}
+
+.container {
+    flex: 1;
+    padding: 24px;
+}
+
+.data {
+    margin: 0 0 8px;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.titulo {
+    margin: 0 0 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.autor {
+    margin: 0 0 16px;
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+.conteudo {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+
+.imagemContainer {
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+
+@media (max-width: 768px) {
+    .imagemContainer {
+        max-height: 400px
+    }
+
+    .card {
+        width: 100%;
+    }
+}

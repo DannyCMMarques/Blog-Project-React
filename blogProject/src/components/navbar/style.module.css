@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand {
+  margin-left: -5px;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.highlight {
+  color: #c96b5f;
+}
+
+.logo img {
+  margin-top: -25px;
+  width: 200px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 150px;
+  }
+
+  .navbar {
+  list-style: none;
+  display:contents;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  font-weight: 600;
+  cursor: pointer;
+  color: black;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+}
