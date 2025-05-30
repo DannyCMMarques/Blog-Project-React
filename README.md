@@ -52,12 +52,9 @@ O layout é **100% responsivo** para desktop e mobile.
 
 ## 📸 Capturas de Tela
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/85580dcd-6932-46ad-8cf9-1e04aa9df737" alt="Home do PerfectRecipe" width="600" />
+  <img src="https://github.com/user-attachments/assets/85580dcd-6932-46ad-8cf9-1e04aa9df737" alt="Home do PerfectRecipe" width="600"  />
 </p>
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/91f46137-4dd5-4987-856a-64091a7d4173" alt="Home do PerfectRecipe" width="600" />
-</p>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/905f76c5-57b2-4853-8f5b-84f876ed8127" alt="Home do PerfectRecipe" width="600" />
 </p>
@@ -67,6 +64,9 @@ O layout é **100% responsivo** para desktop e mobile.
 </p>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b32872cf-5f79-4c58-a49a-4534f894da30" width="600" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7188d74f-0132-4eaf-8b3f-51ab205a6faa" width="600" />
 </p>
 
 
@@ -108,6 +108,7 @@ O layout é **100% responsivo** para desktop e mobile.
   ```bash
   npm run test:coverage
   ```
+![image](https://github.com/user-attachments/assets/a1873fe5-98da-4060-a5e3-d1b1d364f50c)
 
 ---
 
