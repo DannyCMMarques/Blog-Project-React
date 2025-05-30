@@ -1,0 +1,56 @@
+:root {
+    --pink: #c96b5f;
+}
+
+.paginador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.seta {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--pink);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.seta:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.numeros {
+    display: flex;
+    padding: 0;
+    margin: 0 1rem;
+    list-style: none;
+}
+
+.numeros li {
+    margin: 0;
+}
+
+.item {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 0.75rem;
+    font-size: 1rem;
+    color: var(--pink);
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.item:hover:not(.ativo) {
+    opacity: 0.9;
+}
+
+.ativo {
+    background-color: var(--pink);
+    color: #fff;
+}

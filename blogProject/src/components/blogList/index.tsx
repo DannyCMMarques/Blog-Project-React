@@ -2,24 +2,16 @@ import { type JSX } from "react";
 import style from "./style.module.css";
 import ButtonComponent from "../buttons";
 import { useNavigate } from "react-router-dom";
-
-type BlogCardProps = {
-    data: string;
-    titulo: string;
-    autor: string;
-    conteudo: string;
-    imageUrl: string;
-    id: number;
-};
+import type { PostResponseDTO } from "../../service/interfaces/interface";
 
 const BlogList = ({
-    data,
+    horarioFormatado: data,
     titulo,
     autor,
     conteudo,
-    imageUrl,
+    linkImagem,
     id,
-}: BlogCardProps): JSX.Element => {
+}: PostResponseDTO): JSX.Element => {
     const navigate = useNavigate();
     const formatarResumo = (texto: string): string => {
         const limite = 180;
@@ -36,15 +28,17 @@ const BlogList = ({
                 <p className={style.autor}>Por {autor}</p>
                 <p className={style.conteudo}>{formatarResumo(conteudo)}</p>
                 <ButtonComponent
-                    handleOnClick={() => handleOnClick(id)}
+                    onClick={() => handleOnClick(id)}
                     backgroundColor="var(--pink)"
                     colorText="#fff"
                     text="Leia Mais →"
+                    extraStyle={{ marginTop: "24px" }}
+                    tipo = "pequeno"
                 />
             </div>
             <div
                 className={style.imagemContainer}
-                style={{ backgroundImage: `url(${imageUrl})` }}
+                style={{ backgroundImage: `url(${linkImagem})` }}
             ></div>
         </div>
     );
